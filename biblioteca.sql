@@ -1,6 +1,7 @@
 -- Criar banco de dados 
 CREATE DATABASE Biblioteca;
 USE Biblioteca;
+
 -- Criar tabela de autores
 CREATE TABLE autores (
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -14,14 +15,14 @@ nome VARCHAR (100) NOT NULL
 );
 
 -- Criar tabela de livros
-CREATE TABLE livros (
-id INT AUTO_INCREMENT PRIMARY KEY,
-titulo VARCHAR (255) NOT NULL,
+create table livros (
+id INT auto_increment primary key,
+titulo varchar (255) not null,
 id_autor INT,
 id_categoria INT,
 ano_publicado INT,
 FOREIGN KEY (id_autor) REFERENCES autores (id),
-FOREIGN KEY (id_categorias) REFERENCES categoria (id));
+FOREIGN KEY (id_categoria) REFERENCES categoria (id));
 
 -- iNSERIR DADOS DA TABELA AUTORES
 INSERT INTO autores (nome,nacionalidade) VALUES
@@ -30,8 +31,9 @@ INSERT INTO autores (nome,nacionalidade) VALUES
 ('J.K Roling','Britânico');
 
 -- Insert dados na tabela categorias 
-INSERT INTO categorias (nome) VALUES
+INSERT INTO categoria (nome) VALUES
 ('Romance'),
 ('Ficção Cientifica'),
 ('Fantasia');
+
 

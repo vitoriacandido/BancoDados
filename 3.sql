@@ -56,9 +56,10 @@ INSERT INTO ItemNota (id_nota, quantidade, descricao, valor_unitario, valor_tota
 (1, 1, 'HD Externo', 250.00, 250.00),
 (1, 2, 'Monitor LED', 600.00, 1200.00),
 (2, 4, 'Cabo de Força', 15.00, 60.00),
-(3, 2, 'Controle de Xbox', 200.00, 400.00),
+(3, 2, 'Controle de Xbox', 200.00, 400.00), 
 (3, 1, 'Base para notebook', 90.00, 90.00);
 -- UPDATE em um item
 UPDATE ItemNota SET valor_unitario = 30.00, valor_total = 60.00 WHERE id_item = 1;
 -- DELETE de um item
 DELETE FROM ItemNota WHERE id_item = 15;
+
